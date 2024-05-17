@@ -50,17 +50,18 @@
     font-weight:700; 
 }
 .button-unlock{
-    background-image: linear-gradient(to right, #ae4eac, #e29447);
-    font-size: 20px;
+    color: rgb(0, 0, 0) !important;
+    background: linear-gradient(270deg, rgb(255, 134, 137) 0px, rgb(201, 166, 255) 100%) !important;
+    font-size:18px;
     font-weight:700;
     border: none;
     border-radius: 5px;
     padding: 10px 25px;
     margin: 4rem 0rem;   
-    color: white;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease;
 }
 
 .button-unlock:hover{
-    transform:scale(1.05);
+    transform: scale(1.125);
+    transition: all .3s ease;  
 }

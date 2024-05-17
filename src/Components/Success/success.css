@@ -1,7 +1,24 @@
-.content-head{
-    margin: 10rem;
-    margin-right:0px;
-    align-items: baseline;
+.top-curve{
+    height:30vh;
+    -webkit-clip-path: ellipse(85% 59% at 50% 40%);
+    clip-path: ellipse(55% 59% at 50% 0%);
+}
+
+.buttom-curve{
+    background: rgb(243, 243, 243);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:70vh;
+    -webkit-clip-path: ellipse(85% 59% at 50% 40%);
+    clip-path:ellipse(85% 59% at 50% 40%);
+}
+
+.content-head{ 
+    margin:5rem;
+    margin-top: 8rem;
+    margin-left:15rem;
+    align-items: center;
 }
 
 .content-head h2{
@@ -29,5 +46,5 @@
 
 .inner-image{
     height: 100%;
-   margin-left:55px;
+    margin-left:55px;
 }

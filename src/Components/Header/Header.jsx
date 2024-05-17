@@ -14,7 +14,7 @@ function Header() {
               <ul class="navbar-nav ml-auto">
                 <li className="nav-item active ml-4">
                   <Link className="nav-link text-light">Products</Link>
-                  <NavSlider></NavSlider>
+                  <NavSlider/>
                 </li>
                 <li className="nav-item active ml-4">
                 <Link className="nav-link text-light ">Features</Link>

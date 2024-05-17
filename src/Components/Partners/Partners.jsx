@@ -1,6 +1,6 @@
 import React from 'react'
 import './Partners.css'
-
+import { FaArrowRight } from "react-icons/fa6";
 function Partners() {
   return (
     <div className='Partners' id='partners'>
@@ -9,7 +9,7 @@ function Partners() {
             <div className='subparent'>
                 <h2>Empower educators with seamless development from course creation to delivery</h2>
                 <p>Forge partnerships that align with your educational goals, ensuring a  smooth transition from course creation to delivery, whether on local  servers or in the cloud.</p>
-                <h4>Our trusted partners {"->"}</h4>
+                <h4 style={{cursor:'pointer'}}>Our trusted partners <FaArrowRight size='1.2rem'/></h4>
                 <div className="partnerscontainer">
                     <div className='partneritems'>
                         <div className='img'></div>
