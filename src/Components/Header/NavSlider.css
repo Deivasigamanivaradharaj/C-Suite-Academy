@@ -1,0 +1,52 @@
+.navbar-nav li:hover .mega-box, .mega-box:hover{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.mega-box{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    top: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .mega-box .content{
+    background: white;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  .mega-box .content .rows{
+    width: calc(25% - 30px);
+    line-height: 45px;
+  }
+  .content .rows img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .content .rows header{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content .rows .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid rgba(255,255,255,0.09);
+    list-style: none;
+  }
+  .rows .mega-links li a{
+    padding: 0px;
+    padding: 0 20px;
+    font-size: 17px;
+    display: block;
+  }
+  .rows .mega-links li a:hover{
+    color: red;
+    text-decoration: none;
+  }

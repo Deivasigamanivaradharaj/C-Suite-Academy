@@ -1,0 +1,43 @@
+.FindPricing{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.FindPricing .container{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 60%;
+    background: rgba(29, 99, 237, 1);
+    border-radius: 20px;
+}
+
+.FindPricing .container .leftcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+}
+.FindPricing .container .leftcontainer h1{
+    font-size: 35px;
+}
+
+.FindPricing .container .rightcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.FindPricing .container .rightcontainer button{
+    background: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 10px;
+}

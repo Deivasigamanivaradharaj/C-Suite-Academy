@@ -1,0 +1,37 @@
+.engage-head{
+    text-align: center;
+}
+
+.engage-head h2{
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    margin-bottom:15px;  
+    background: linear-gradient(90deg, rgb(0, 8, 77) 0px, rgb(29, 99, 237) 100%);
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    background-clip: text;
+}
+.engage-head h3{
+    font-size:30px;
+    font-weight:800;
+    padding-top: 10px;
+}
+
+.engage-head .engage-para{
+    padding-top: 10px;
+    font-size:25px;
+    font-weight: 500;
+}
+.engage-head .engage-para-two{
+    padding-top: 30px;
+    font-size:25px;
+    font-weight:bold;
+}
+.engage-head h4{
+    color: rgb(29, 99, 237);
+}
+.our-lms-supporet{
+    padding-top: 10px;
+    font-weight: 500;
+    color: rgb(128, 121, 121);
+}
