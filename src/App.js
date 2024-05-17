@@ -16,13 +16,14 @@ import FindPricing from './Components/FindPricing/FindPricing';
 import Partners from './Components/Partners/Partners';
 import Success from './Components/Success/Success';
 import Engage from './Components/Engage/Engage'
+import Overlaycards from './Components/Overlaycards/Overlaycards'
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={[<Landingpage/>,<Management/>,<Brands/>,<Success/>,<Engage/>,<Partners/>,<FindPricing/>,<ContactUs/>,<Footer/>]}/>
+          <Route path="/" element={[<Landingpage/>,<Management/>,<Brands/>,<Success/>,<Overlaycards/>,<Engage/>,<Partners/>,<FindPricing/>,<ContactUs/>,<Footer/>]}/>
       </Routes>
      </Router>
     </div>
