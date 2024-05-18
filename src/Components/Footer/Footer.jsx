@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className='footer' id='footer'>
       <section className='section1'>
-        <div className='logo'>Logo</div>
+        <img src={"logo3.png"} alt="" width={"200px"}/>
         <p>Practical-based learning platform to enhance skills</p>
         <h6>Follow Us on</h6>
         <div className='sociallinks'>
