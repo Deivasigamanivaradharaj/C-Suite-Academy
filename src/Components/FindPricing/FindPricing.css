@@ -41,3 +41,30 @@
     text-align: center;
     padding: 5px 10px;
 }
+
+@media (max-width: 775px) {
+    .FindPricing{
+        height: max-content;
+        padding: 30px;
+    }
+    .FindPricing .container{
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .FindPricing .container .leftcontainer{
+        gap: 10px;
+    }
+    .FindPricing .container .leftcontainer h1, .FindPricing .container .leftcontainer p{
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 775px) {
+    .FindPricing .container .leftcontainer h1{
+        font-size: 20px;
+    }
+    .FindPricing .container .leftcontainer p{
+        font-size: 15px;
+    }
+  }

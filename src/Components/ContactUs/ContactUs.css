@@ -74,3 +74,33 @@
     width: max-content;
     padding: 5px 20px;
 }
+
+@media (max-width: 1125px) {
+    .ContactUs .leftcontainer{
+        width: 35%;
+    }
+    .ContactUs .rightcontainer {
+        width: 55%;
+    }
+}
+@media (max-width: 835px) {
+    .ContactUs{
+        flex-direction: column;
+        height: max-content;
+    }
+    .ContactUs .leftcontainer{
+        width: 100%;
+    }
+    .ContactUs .rightcontainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 835px) {
+    .ContactUs .rightcontainer form .rows{
+        flex-direction: column;
+    }
+    .ContactUs .rightcontainer form .rows .inputgroup{
+        width: 100%;
+    }
+}

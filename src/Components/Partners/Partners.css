@@ -64,3 +64,18 @@
  .subparent .partnerscontainer .partneritems p{
     width: 100%;
  }
+
+ @media (max-width: 775px) {
+   .subparent{
+      height: max-content;
+      padding-bottom: 10vh;
+   }
+   .subparent .partnerscontainer{
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+   }
+   .subparent .partnerscontainer .partneritems{
+      width: 80%;
+   }
+ }

@@ -145,3 +145,32 @@
     padding: 5px 10px;
     color: white;
 }
+
+
+@media (max-width:1150px) {
+    .footer{
+        width: 100%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .footer .section1, .footer .section2, .footer .section3, .footer .section4{
+        width: 100%;
+    }
+}
+
+@media (max-width:1150px) {
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .footer .section1, .footer .section2, .footer .section3, .footer .section4{
+        width: 100%;
+        padding: 10px;
+    }
+    .footer .section4 .instructoremail{
+        flex-direction: column;
+    }
+}
