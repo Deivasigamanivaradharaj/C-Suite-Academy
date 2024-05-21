@@ -1,13 +1,14 @@
 .engage-head{
     text-align: center;
     margin-top: 5rem;
+    padding: 1rem;
 }
 
 .engage-head h2{
     font-weight: bold; 
-    font-size: 1.5rem; 
+    font-size: 1.5em; 
     margin-bottom:15px;  
-    background: linear-gradient(90deg, rgb(0, 8, 77) 0px, rgb(29, 99, 237) 100%);
+    background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
     -webkit-text-fill-color: transparent;
     display: inline-block;
     background-clip: text;

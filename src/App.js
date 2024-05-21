@@ -23,7 +23,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={[<Landingpage/>,<Management/>,<Brands/>,<Success/>,<Overlaycards/>,<Engage/>,<Partners/>,<FindPricing/>,<ContactUs/>,<Footer/>]}/>
+          <Route path="/" element={[<Landingpage/>,<Management/>,<Success/>,<Engage/>,<Partners/>,<FindPricing/>,<ContactUs/>,<Footer/>]}/>
       </Routes>
      </Router>
     </div>

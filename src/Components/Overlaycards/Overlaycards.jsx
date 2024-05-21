@@ -1,14 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Overlaycards.css';
-import Aos from "aos"
-import 'aos/dist/aos.css'
+
 import img1 from './Assets/1.jpg'
 import img2 from './Assets/2.jpg'
 import img3 from './Assets/images.jpeg.jpg'
 
+//Aos animations
+import Aos from "aos"
+import 'aos/dist/aos.css'
 
 
 const Overlaycards = () => {
+  //aos fatch 
+  useEffect(()=>{
+    Aos.init();
+   },[])
+
   return (
     <div className='Overlaycards'>
     <div class="container">

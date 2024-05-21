@@ -8,9 +8,8 @@ function Success() {
     <>
       
       <div className='container-fluid' id='success'>
-      <div className="top-curve"></div>
-        <div className='row  buttom-curve'>
-          <div className='col-md-7'>
+        <div className='row'>
+          <div className='col-md-7 center-all'>
             <div className='content-head '>
               <h2>Your Success Matters</h2>
               <p>Our learning technology is designed to propel you beyond your goals effortlessly. 

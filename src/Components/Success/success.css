@@ -1,35 +1,37 @@
-.top-curve{
-    height:30vh;
-    -webkit-clip-path: ellipse(85% 59% at 50% 40%);
-    clip-path: ellipse(55% 59% at 50% 0%);
-}
-
-.buttom-curve{
-    background: rgb(243, 243, 243);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height:70vh;
-    -webkit-clip-path: ellipse(85% 59% at 50% 40%);
-    clip-path:ellipse(85% 59% at 50% 40%);
+.center-all{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .content-head{ 
     margin:5rem;
-    margin-top: 8rem;
-    margin-left:15rem;
+    margin-top:6rem;
+    margin-left:10rem;
     align-items: center;
 }
+
+/* Adjustments for very small devices */
+@media (max-width: 768px) {
+    .content-head{ 
+        margin:0rem;
+        margin-top:0rem;
+        margin-left:0rem;
+        align-items: center;
+    }
+}
+
 
 .content-head h2{
   font-weight: bold; 
   font-size:2rem; 
   margin-bottom:15px;  
-  background: linear-gradient(90deg, rgb(0, 8, 77) 0px, rgb(29, 99, 237) 100%);
+  background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
   -webkit-text-fill-color: transparent;
   display: inline-block;
   background-clip: text;
 }
+
 .content-head p{
     font-size:17px;
     font-weight: 600;
@@ -46,5 +48,5 @@
 
 .inner-image{
     height: 100%;
-    margin-left:55px;
+    margin-left:40px;
 }

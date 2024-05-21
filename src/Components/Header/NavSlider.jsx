@@ -1,12 +1,25 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './NavSlider.css'
 
+import brand from './Asset/brand-1.png';
+
+//Aos animations
+import Aos from "aos"
+import 'aos/dist/aos.css'
+
+
 function NavSlider() {
+
+  //aos fatch 
+  useEffect(()=>{
+    Aos.init();
+   },[])
+
   return (
     <div class="mega-box">
             <div class="content">
               <div class="rows">
-                <img src={"./navslider.png"} alt=""></img>
+                <img src={brand} alt=""/>
               </div>
               <div class="rows">
                 <header>Pages</header>

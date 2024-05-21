@@ -1,18 +1,19 @@
 .lms-info {
   text-align: center;
+  margin-top: 3rem;
 }
 .lms-info .why-lms {
   font-weight: bold; 
   font-size: 1.5rem; 
   margin-bottom:15px;  
-  background: linear-gradient(90deg, rgb(0, 8, 77) 0px, rgb(29, 99, 237) 100%);
+  background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
   -webkit-text-fill-color: transparent;
   display: inline-block;
   background-clip: text;
 }
 
 .why-para-one{
-  font-size:20px;
+  font-size: 2rem; 
   font-weight:800;
   padding-top: 10px;
 }
@@ -21,7 +22,7 @@
   padding-top: 10px;
   font-size:17px;
   font-weight: 500;
-  color: navy;
+ 
 }
   
 /*first-brand*/
@@ -110,8 +111,8 @@
 
 .stat-item strong {
   display: block;
-  font-size: 50px;
-  background: linear-gradient(90deg, rgb(0, 8, 77) 0px, rgb(29, 99, 237) 100%);
+  font-size:70px;
+  background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
   -webkit-text-fill-color: transparent;
   display: inline-block;
   background-clip: text;
@@ -142,4 +143,54 @@
   .para-tool {
     font-size: 14px; 
   }
+}
+
+
+
+
+/*scroll container here */
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.logos-container-one,
+.logos-container-two {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logos-container-one {
+  animation: scroll-left 20s linear infinite;
+}
+
+.logos-container-two {
+  animation: scroll-right 20s linear infinite;
+}
+
+.logo-item-one,
+.logo-item-two {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.logo-image-one,
+.logo-image-two {
+  display: block;
 }

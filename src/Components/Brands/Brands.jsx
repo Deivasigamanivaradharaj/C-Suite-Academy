@@ -26,6 +26,7 @@ import onemain from './Assets/onemain-vertical.svg';
 import nytimes from './Assets/nytimes-rectangle-logo.svg';
 import player from './Assets/jw-player-logo.svg';
 import tabcorp from './Assets/tabcorp-logo.svg'
+
 const data = {
     brandone: [
       { name: 'ADP', src: ADP },
