@@ -24,14 +24,20 @@ const Landingpage = () => {
     <>
       <div className="landing-page" id='home'>
         <Header/>
-        <section className="hero-section">
-          <div className="container">
-            <p className='text-learn'><PiStudent size='2rem' />Learn more</p>
-            <p className='text-grow'>Grow your skills,</p>
-            <p className='text-build'>Build your future</p>
-            <p className='text-course-development'>Streamlining course development and delivery</p>
-            <button type="button" className="button-unlock" data-aos="fade-up"
-            data-aos-duration="3000">Unlock Your Potential</button>
+        <section className="hero-section" >
+          <div className="container-landing-text">
+            <div className='text-learn' data-aos="fade-down" data-aos-duration="3000">
+              <PiStudent size='2.5rem' />
+              <p>Learn more</p>
+            </div>
+            <p className='text-grow'  data-aos="zoom-in-up"  data-aos-duration="1000">Grow your skills,</p>
+            <p className='text-build'  data-aos="zoom-in-up"  data-aos-duration="2000">Build your future</p>
+            <p className='text-course-development'  data-aos="zoom-in-up"  data-aos-duration="3000">Streamlining course development and delivery</p>
+            <div data-aos="fade-up"
+            data-aos-duration="3000">
+              <button type="button" className="button-unlock" >Unlock Your Potential</button>
+            </div>
+             
           </div>
         </section>
       </div>  

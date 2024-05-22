@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import "./managements.css";
 import {
   MdOutlineAssessment,
@@ -6,6 +6,11 @@ import {
   MdDashboard,
 } from "react-icons/md";
 import { LiaUniversitySolid } from "react-icons/lia";
+
+
+//Aos animations
+import Aos from "aos"
+import 'aos/dist/aos.css'
 
 const contentData = {
   Assessment: {
@@ -97,12 +102,12 @@ const Management = () => {
         <div className="row">
           <div className="col-md-8">
             <div className="changes-head">
-              <h1 className="content-title">{content.title}</h1>
+              <h1 className="content-title" data-aos="fade-up">{content.title}</h1>
               <div className="total-content">
                 <div className="container-para">
                   {content.content.map((item, index) => (
                     <div key={index}>
-                      <strong className="item-title">{item.title}</strong>
+                      <strong className="item-title"  data-aos="fade-up">{item.title}</strong>
                       <p className="pt-1">{item.text}</p>
                     </div>
                   ))}
@@ -120,12 +125,17 @@ const Management = () => {
     );
   };
 
+  //aos fatch 
+  useEffect(()=>{
+    Aos.init();
+  },[])
+
   return (
     <>
       <div className="container-fluid" id="what">
         <div className="container-lms-head">
           <div className="heading-lms">
-            <div>What is LMS ?</div>
+            <div  data-aos="fade-up" data-aos-duration="3000">What is LMS ?</div>
             <div>
               Streamline educational course administration and
               <br /> delivery to enhance learning experience

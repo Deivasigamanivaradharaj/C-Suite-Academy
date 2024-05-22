@@ -57,14 +57,14 @@
 
 .buttons-all .txt-access:hover {
     color: white;
-    background-color: rgb(89, 118, 248);
+    background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
     transform: scale(1.125);
     transition: all .3s ease;  
     
 }
 
 .text-primary-color{
-    color: rgb(89, 118, 248);
+    color: rgb(98, 189, 139);
 }
 .buttons-all .txt-access:hover .text-primary-color {
     color: white; 
@@ -84,9 +84,23 @@
       width: 45%; 
       margin: 5px; 
     }
+
+    .container-read{
+      padding: 2rem;
+    }
+
+    .buttons-all .txt-access {
+      width: 50%;
+      flex-direction: row;
+    }
   }
 
+  @media (max-width: 520px) {
 
+    .buttons-all .txt-access {
+      width: 70%;
+    } 
+  }
 
 
 /* stats change container */
@@ -124,7 +138,7 @@
   background-image: url('./Asset/Assessment.jpg');
   background-size: 100% 100%;
   border-radius:5px;
-  width:400px; 
+  width:350px; 
   height:300px; 
 } 
 
@@ -132,15 +146,15 @@
   background-image: url('./Asset/subscribe.gif');
   background-size: 100% 100%;
   border-radius:5px;
-  width:400px; 
-  height:300px; 
+  width:500px; 
+  height:350px; 
 }
 
 .card-image-dashboard{
   background-image: url('./Asset/Dashboard.gif');
   background-size: 100% 100%;
   border-radius:5px;
-  width:400px; 
+  width:300px; 
   height:300px; 
 }
 .card-image-learning{

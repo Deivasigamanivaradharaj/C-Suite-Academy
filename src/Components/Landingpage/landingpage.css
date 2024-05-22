@@ -36,10 +36,15 @@
     100%{background-position:0% 50%}
 }
 
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .tag-size{
     color: #999;
     background-color: #999; 
-    height: 1.5px; 
     border: none; 
 }
 
@@ -57,9 +62,11 @@
     font-size:20px;
 }
 .text-learn{
-   
+    display:flex;
+    justify-content: center;
     font-size:30px;
     font-weight:700;
+    margin-bottom: 1.5rem;
 }
 .text-grow{
     margin-top: -20px;
@@ -78,7 +85,7 @@
 }
 .button-unlock{
     color: rgb(0, 0, 0) !important;
-    background: linear-gradient(270deg, rgb(19, 240, 11) 0px, rgb(229, 229, 42) 100%) !important;
+    background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
     font-size:18px;
     font-weight:700;
     border: none;
@@ -89,8 +96,8 @@
 }
 
 .button-unlock:hover{
-    transform: scale(1.125);
-    transition: all .3s ease;  
+    transform: scale(1.150);
+    transition: all .3s ease; 
 }
 
 
@@ -145,6 +152,7 @@
         -webkit-clip-path: ellipse(100% 59% at 50% 40%);
         clip-path:ellipse(100% 59% at 50% 40%);
         overflow: auto;
+       
     }
 
     .hero-section {
