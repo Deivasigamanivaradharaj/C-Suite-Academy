@@ -1,5 +1,5 @@
 .Partners{
-    background: #00084d;
+   background:#43AA28;
 }
 .parent{
     background: white;
@@ -14,9 +14,8 @@
     clip-path: ellipse(55% 59% at 50% 0%);
  }
 .subparent{
-    background: rgba(16, 20, 51, 1);
     background-repeat: no-repeat;
-    background-color: #00084d ;
+    background:#43AA28;
     background-size: cover;
     background-position: center;
     height:70vh;
@@ -30,17 +29,24 @@
  .subparent h2{
     width: 60%;
     text-align: center;
-    color: white;
+    color: rgba(255, 255, 255,0.703);
  }
  .subparent p{
     width: 55%;
     text-align: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.703);
  }
  .subparent h4{
     text-align: center;
-    color: rgba(26, 90, 220, 1);
+    color:rgba(0, 0, 0, 0.721);
+    font-weight:600;
+    transition: all .3s ease;
+    cursor: pointer;
  }
+ .subparent h4:hover{
+   transform: scale(1.125);
+    transition: all .3s ease; 
+}
 
  .subparent .partnerscontainer{
     display: flex;
@@ -56,10 +62,10 @@
  }
  .subparent .partnerscontainer .partneritems .img{
     display: flex;
-    height: 85px;
-    width: 85px;
-    background:blueviolet;
-    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background:white;
+    border-radius:50%;
  }
  .subparent .partnerscontainer .partneritems p{
     width: 100%;

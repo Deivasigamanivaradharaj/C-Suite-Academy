@@ -1,4 +1,5 @@
-.FindPricing{
+/* Main container styling */
+.FindPricing {
     height: 50vh;
     width: 100%;
     display: flex;
@@ -6,65 +7,95 @@
     align-items: center;
     background: white;
 }
-.FindPricing .container{
+
+.FindPricing .container {
     color: white;
     display: flex;
     justify-content: space-evenly;
     width: 80%;
     height: 60%;
-    background: rgba(29, 99, 237, 1);
+    background: #0972ff; /* Static blue background color */
     border-radius: 20px;
 }
 
-.FindPricing .container .leftcontainer{
+.FindPricing .container .leftcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 70%;
     height: 100%;
 }
-.FindPricing .container .leftcontainer h1{
+
+.FindPricing .container .leftcontainer h1 {
     font-size: 35px;
 }
 
-.FindPricing .container .rightcontainer{
+.FindPricing .container .rightcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-.FindPricing .container .rightcontainer button{
+
+.FindPricing .container .rightcontainer button {
+    position: relative;
+    overflow: hidden; /* Required for ripple effect */
     background: white;
     border: none;
     border-radius: 5px;
     text-align: center;
-    padding: 5px 10px;
+    padding: 10px 20px; /* Adjusted padding */
+    color: black; /* Initial text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.FindPricing .container .rightcontainer button .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(0, 0, 0); /* Color for ripple effect */
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 775px) {
-    .FindPricing{
+    .FindPricing {
         height: max-content;
         padding: 30px;
     }
-    .FindPricing .container{
+
+    .FindPricing .container {
         padding: 30px;
         flex-direction: column;
         align-items: center;
     }
-    .FindPricing .container .leftcontainer{
+
+    .FindPricing .container .leftcontainer {
         gap: 10px;
     }
-    .FindPricing .container .leftcontainer h1, .FindPricing .container .leftcontainer p{
+
+    .FindPricing .container .leftcontainer h1,
+    .FindPricing .container .leftcontainer p {
         text-align: center;
     }
-  }
+}
 
-  @media (max-width: 775px) {
-    .FindPricing .container .leftcontainer h1{
+@media (max-width: 775px) {
+    .FindPricing .container .leftcontainer h1 {
         font-size: 20px;
     }
-    .FindPricing .container .leftcontainer p{
+
+    .FindPricing .container .leftcontainer p {
         font-size: 15px;
     }
-  }
+}

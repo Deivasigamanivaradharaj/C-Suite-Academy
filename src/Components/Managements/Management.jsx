@@ -135,7 +135,7 @@ const Management = () => {
       <div className="container-fluid" id="what">
         <div className="container-lms-head">
           <div className="heading-lms">
-            <div  data-aos="fade-up" data-aos-duration="3000">What is LMS ?</div>
+            <div   data-aos="fade-up">What is LMS ?</div>
             <div>
               Streamline educational course administration and
               <br /> delivery to enhance learning experience

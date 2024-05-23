@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import './NavSlider.css'
 
-import brand from './Asset/brand-1.png';
+import brand from './Asset/logo-side.png';
 
 //Aos animations
 import Aos from "aos"
@@ -19,10 +19,11 @@ function NavSlider() {
     <div class="mega-box">
             <div class="content">
               <div class="rows">
-                <img src={brand} alt=""/>
+                <img src={brand} alt="" className='image-side'/>
               </div>
+              
               <div class="rows">
-                <header>Pages</header>
+                <header>Page-first</header>
                 <ul class="mega-links">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#what">What is LMS?</a></li>
@@ -33,8 +34,9 @@ function NavSlider() {
                   <li><a href="#footer">Footer</a></li>
                 </ul>
               </div>
+
               <div class="rows">
-                <header>Pages</header>
+                <header>Page-second </header>
                 <ul class="mega-links">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#what">What is LMS?</a></li>
@@ -45,8 +47,9 @@ function NavSlider() {
                   <li><a href="#footer">Footer</a></li>
                 </ul>
               </div>
+
               <div class="rows">
-                <header>Pages</header>
+                <header>Page-third</header>
                 <ul class="mega-links">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#what">What is LMS?</a></li>
@@ -57,8 +60,9 @@ function NavSlider() {
                   <li><a href="#footer">Footer</a></li>
                 </ul>
               </div>
+
               <div class="rows">
-                <header>Pages</header>
+                <header>Page-fourth </header>
                 <ul class="mega-links">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#what">What is LMS?</a></li>
@@ -69,7 +73,8 @@ function NavSlider() {
                   <li><a href="#footer">Footer</a></li>
                 </ul>
               </div>
-              {/* <div class="rows">
+
+              <div class="rows">
                 <header>Email Services</header>
                 <ul class="mega-links">
                   <li><a href="#">Personal Email</a></li>
@@ -78,6 +83,7 @@ function NavSlider() {
                   <li><a href="#">Web Marketing</a></li>
                 </ul>
               </div>
+
               <div class="rows">
                 <header>Security services</header>
                 <ul class="mega-links">
@@ -86,7 +92,7 @@ function NavSlider() {
                   <li><a href="#">Privacy Seal</a></li>
                   <li><a href="#">Website design</a></li>
                 </ul>
-              </div> */}
+              </div>
             </div>
           </div>
   )

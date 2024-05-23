@@ -28,9 +28,18 @@
     padding-top: 30px;
     font-size:25px;
     font-weight:bold;
+   
 }
 .engage-head h4{
+    font-size: 23px;
     color: rgb(29, 99, 237);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.engage-head h4:hover{
+    transform: scale(1.125);
+    transition: all .3s ease; 
 }
 .our-lms-supporet{
     padding-top: 10px;

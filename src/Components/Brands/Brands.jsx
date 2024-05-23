@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import './brands.css';
@@ -26,6 +26,12 @@ import onemain from './Assets/onemain-vertical.svg';
 import nytimes from './Assets/nytimes-rectangle-logo.svg';
 import player from './Assets/jw-player-logo.svg';
 import tabcorp from './Assets/tabcorp-logo.svg';
+
+
+//Aos animations
+import Aos from "aos"
+import 'aos/dist/aos.css'
+
 
 const data = {
   brandone: [
@@ -60,6 +66,13 @@ const data = {
 };
 
 const Brands = () => {
+
+   //aos fatch 
+   useEffect(()=>{
+    Aos.init();
+  },[])
+
+  
   const { ref: usersRef, inView: usersInView } = useInView();
   const { ref: instructorsRef, inView: instructorsInView } = useInView();
   const { ref: coursesRef, inView: coursesInView } = useInView();
@@ -91,12 +104,14 @@ const Brands = () => {
     startScrolling();
   });
 
+ 
+
   return (
     <div className='container-fluid' id='why'>
       <div className='row'>
         <div className='col-md-6'>
           <div className='lms-info'>
-            <h1 className='why-lms'>Why use LMS?</h1>
+            <h1 className='why-lms'  data-aos="fade-up">Why use LMS?</h1>
             <h3 className='why-para-one'>Preferred by educators worldwide.<br /> Adopted by leading educational institutions.</h3>
             <p className='why-para-two'>LMS offers a comprehensive suite of tools, services, and content, facilitating streamlined course management and delivery, empowering educators to enhance learning experiences effectively.</p>
           </div>
