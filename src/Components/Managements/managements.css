@@ -7,7 +7,8 @@
     font-weight: bold; 
     font-size: 1.5rem; 
     margin-bottom:15px;  
-    background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
+    /* background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b); */
+    background: linear-gradient(135deg, #bf00ff, #8949ff, blue);
     -webkit-text-fill-color: transparent;
     display: inline-block;
     background-clip: text;
@@ -57,14 +58,16 @@
 
 .buttons-all .txt-access:hover {
     color: white;
-    background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b);
+    /* background: linear-gradient(232deg, #02e1e1, #41d271, #c6d94b); */
+    background: linear-gradient(135deg, #bf00ff, #8949ff, blue);
     transform: scale(1.125);
     transition: all .3s ease;  
     
 }
 
 .text-primary-color{
-    color: rgb(98, 189, 139);
+    /* color: rgb(98, 189, 139); */
+    color: #8949ff;
 }
 .buttons-all .txt-access:hover .text-primary-color {
     color: white; 

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import NavSlider from './NavSlider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons' 
 
 import logo from './Asset/brand-1.png'
 
@@ -8,7 +10,7 @@ function Header() {
    
   return (
     <header>
-          <nav class="navbar navbar-expand-lg navbar-light pt-4  sticky-top">
+          <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style={{height:"100px", margin:"0"}}>
             <a class="navbar-brand ml-5 text-light" href="#"><img src={logo} alt="" height={"40px"} /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -16,7 +18,7 @@ function Header() {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li className="nav-item active ml-4">
-                  <Link className="nav-link text-light">Products</Link>
+                  <Link className="nav-link text-light">Products <FontAwesomeIcon className='angledown' icon={faAngleDown} /></Link>
                    <NavSlider  />
                 </li>
                 <li className="nav-item active ml-4">

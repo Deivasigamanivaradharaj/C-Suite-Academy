@@ -17,6 +17,16 @@
     background: #0972ff; /* Static blue background color */
     border-radius: 20px;
 }
+.FindPricing .container:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+
+.FindPricing .container:hover  .rightcontainer button {
+    background: #0972ff;
+    color: white;
+}
 
 .FindPricing .container .leftcontainer {
     display: flex;
@@ -49,24 +59,12 @@
     color: black; /* Initial text color */
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+}
+.FindPricing .container .rightcontainer button:hover {
+    transform: scale(1.1);
 }
 
-.FindPricing .container .rightcontainer button .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(0, 0, 0); /* Color for ripple effect */
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-    pointer-events: none;
-}
-
-@keyframes ripple-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
 
 @media (max-width: 775px) {
     .FindPricing {
