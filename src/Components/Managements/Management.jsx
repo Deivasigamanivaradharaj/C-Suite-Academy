@@ -101,13 +101,13 @@ const Management = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-8">
-            <div className="changes-head">
-              <h1 className="content-title" data-aos="fade-up">{content.title}</h1>
+            <div data-aos="fade-right" className="changes-head">
+              <h1 className="content-title">{content.title}</h1>
               <div className="total-content">
                 <div className="container-para">
                   {content.content.map((item, index) => (
                     <div key={index}>
-                      <strong className="item-title"  data-aos="fade-up">{item.title}</strong>
+                      <strong className="item-title" >{item.title}</strong>
                       <p className="pt-1">{item.text}</p>
                     </div>
                   ))}
@@ -116,7 +116,7 @@ const Management = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="image-sytle">
+            <div data-aos="fade-left" className="image-sytle">
               <div className={content.imageClass}></div>
             </div>
           </div>
@@ -134,8 +134,8 @@ const Management = () => {
     <>
       <div className="container-fluid" id="what">
         <div className="container-lms-head">
-          <div className="heading-lms">
-            <div   data-aos="fade-up">What is LMS ?</div>
+          <div className="heading-lms" data-aos="fade-up">
+            <div  >What is LMS ?</div>
             <div>
               Streamline educational course administration and
               <br /> delivery to enhance learning experience
@@ -154,19 +154,19 @@ const Management = () => {
 
       <div className="container-read">
         <div className="buttons-all">
-          <button className="txt-access" onClick={() => handleButtonClick("Assessment")}>
+          <button data-aos="fade-right" className="txt-access" onClick={() => handleButtonClick("Assessment")}>
             <MdOutlineAssessment className="text-primary-color mr-2" size="1.5rem" />
             <span>Assessment</span>
           </button>
-          <button className="txt-access" onClick={() => handleButtonClick("Subscribe")}>
+          <button data-aos="fade-right" className="txt-access" onClick={() => handleButtonClick("Subscribe")}>
             <MdOutlineUnsubscribe className="text-primary-color mr-2" size="1.5rem" />
             <span>Subscribe</span>
           </button>
-          <button className="txt-access" onClick={() => handleButtonClick("Dashboard")}>
+          <button data-aos="fade-left" className="txt-access" onClick={() => handleButtonClick("Dashboard")}>
             <MdDashboard className="text-primary-color mr-2" size="1.5rem" />
             <span>Dashboard</span>
           </button>
-          <button className="txt-access" onClick={() => handleButtonClick("Learning")}>
+          <button data-aos="fade-left" className="txt-access" onClick={() => handleButtonClick("Learning")}>
             <LiaUniversitySolid className="text-primary-color mr-2" size="1.5rem" />
             <span>Learning</span>
           </button>

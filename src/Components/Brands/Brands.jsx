@@ -111,7 +111,7 @@ const Brands = () => {
       <div className='row'>
         <div className='col-md-6'>
           <div className='lms-info'>
-            <h1 className='why-lms'  data-aos="fade-up">Why use LMS?</h1>
+            <h1 className='why-lms'>Why use LMS?</h1>
             <h3 className='why-para-one'>Preferred by educators worldwide.<br /> Adopted by leading educational institutions.</h3>
             <p className='why-para-two'>LMS offers a comprehensive suite of tools, services, and content, facilitating streamlined course management and delivery, empowering educators to enhance learning experiences effectively.</p>
           </div>
@@ -143,7 +143,9 @@ const Brands = () => {
             <div className="logos-wrapper">
               <div className="logos-content">
                 {data.brandone.map((logo, index) => (
-                  <div key={index} className="logo-item">
+                  <div data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500" key={index} className="logo-item">
                     <img src={logo.src} alt={logo.name} className="logo-image" />
                   </div>
                   

@@ -31,15 +31,15 @@ function Partners() {
                 <h4  style={{cursor:'pointer'}}>Our trusted partners <FaArrowRight size='1.2rem'/></h4>
                 </div>
                 <div className="partnerscontainer">
-                    <div className='partneritems'>
+                    <div data-aos="fade-up" className='partneritems'>
                         <div className='img p-3'><ImAndroid size='3rem'/></div>
                         <p>An online learning marketplace offering a diverse array of  courses across various subjects.</p>
                     </div>
-                    <div className='partneritems'>
+                    <div data-aos="fade-up" className='partneritems'>
                     <div className='img p-3'><ImStatsBars size='3rem'/></div>
                         <p>A platform providing professional courses, certifications,  and personalized mentorship to enhance career.</p>
                     </div>
-                    <div className='partneritems'>
+                    <div data-aos="fade-up" className='partneritems'>
                     <div className='img p-3'><SiSololearn size='3rem'/></div>
                         <p>A learning management system facilitating intuitive course  design, interactive content creation.</p>
                     </div>

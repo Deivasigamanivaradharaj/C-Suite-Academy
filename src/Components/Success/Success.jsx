@@ -19,9 +19,9 @@ function Success() {
       
       <div className='container-fluid' id='success'>
         <div className='row'>
-          <div className='col-md-7 center-all'>
+          <div className='col-md-7 center-all' data-aos="fade-right">
             <div className='content-head '>
-              <h2 data-aos="fade-up">Your Success Matters</h2>
+              <h2>Your Success Matters</h2>
               <p>Our learning technology is designed to propel you beyond your goals effortlessly. 
                 From our user experience design to our unwavering support, the Absorb team handles the heavy lifting,
                 allowing your learners to excel, your administrators to relax, and your business to outperform the competition.
@@ -29,7 +29,7 @@ function Success() {
                 Experience it firsthand and see for yourself.</p>
             </div>
           </div>
-          <div className='col-md-5' style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <div data-aos="fade-left" className='col-md-5' style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
             <div className='outer-image'>
               <img src={inner} className='inner-image'/>
             </div>
