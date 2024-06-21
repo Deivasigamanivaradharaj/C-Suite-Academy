@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./assessmentsstart.css";
 import logoela from "../asset/brand-footer.png";
-import questionData from "./Questionsdata.json";
+// import questionData from "./Questionsdata.json";
 import { FaCheckCircle } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +16,7 @@ import { getQuestions, submitAnswer } from "../../../api/api";
 const Assessmentsstart = () => {
   const navigate = useNavigate();
 
-  // const [questionData, setQuestion] = useState(null);
+  const [questionData, setQuestion] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [timeLeft, setTimeLeft] = useState(23 * 60 + 46); // 23 minutes and 46 seconds
@@ -30,7 +30,7 @@ const Assessmentsstart = () => {
       if (questionData === null) {
         const data = await getQuestions();
         console.log(data);
-        // setQuestion(data);
+        setQuestion(data);
       }
     };
     fun();
