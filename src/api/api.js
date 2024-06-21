@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API = axios.create({ baseURL: "http://localhost:5000/test" });
+export const API = axios.create({ baseURL: "https://c-suite-server.onrender.com/test" });
 
 export const getQuestions = async () => {
   try {
