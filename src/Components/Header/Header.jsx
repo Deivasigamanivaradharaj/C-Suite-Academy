@@ -45,10 +45,10 @@ function Header() {
               </ul>
 
               <ul class="navbar-nav ml-auto mr-3 " data-aos="fade-left">
-                <li className="nav-item active">
+                <li className="nav-item active ml-4">
                   <button type="button" className="btn button-logoin text-light mb-2 mb-md-2 mb-lg-0  ">Log In</button>
                 </li>
-                <li className="nav-item active ml-md-3 ">
+                <li className="nav-item active ml-md-3 ml-4">
                   <button type="button" className="btn btn-light ">Get Started </button>
                 </li>
               </ul>  

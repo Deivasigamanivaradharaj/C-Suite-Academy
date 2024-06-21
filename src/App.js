@@ -26,12 +26,12 @@ import Assessmentsstart from './Components/Assessments/Assessmentsstart/Assessme
 
 function App() {
   return (
-    <div>
+    <div style={{width:"100vw", overflow:"hidden"}}>
       <Router>
         <Routes>
           <Route path="/" element={[<Landingpage/>,<Management/>,<Brands/>,<Success/>,<Engage/>,<Partners/>,<FindPricing/>,<ContactUs/>,<Footer/>]}/>
           <Route path="/entrylevel-start-page" element={<Entrylevel/>}/>
-          <Route path="/entrylevel-start-page/quick-assessment" element={<Assessmentsstart/>}/>
+          <Route path="/quick-assessment" element={<Assessmentsstart/>}/>
           <Route path="/finish-assessment" element={<Closelevel/>}/>
       </Routes>
      </Router>  

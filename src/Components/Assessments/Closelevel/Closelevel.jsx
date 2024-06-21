@@ -33,7 +33,7 @@ const Closelevel = () => {
                         </div>
                 
                         <p className='complete-message'>Thank you for completing the assessment!</p>
-                        <p className='blur-text'>Your exam has been successfully submitted.<br/>To view your results, please subscribe to our service.</p>
+                        <p className='blur-text'>Your exam has been successfully submitted.<br/>View your results and more by join us, Click here to view our plans.</p>
                         <button>view plans</button>
                     </div>
                        

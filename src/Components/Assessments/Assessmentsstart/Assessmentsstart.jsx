@@ -5,6 +5,9 @@ import questionData from './Questionsdata.json';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 //react-router
 import { useNavigate } from "react-router-dom";
@@ -19,7 +22,7 @@ const Assessmentsstart = () => {
   const [selectedUser, setSelectedUser] = useState('Deivasigamani');
   const [selectedUserDropdown, setSelectedUserDropdown] = useState(1);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  const [bookmarkedQuestions, setBookmarkedQuestions] = useState([]);
+  const [bookmarkedQuestions, setBookmarkedQuestions] = useState({});
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -29,11 +32,15 @@ const Assessmentsstart = () => {
   }, []);
 
   const handleBookmark = () => {
-    setBookmarkedQuestions((prev) =>
-      prev.includes(currentQuestionIndex)
-        ? prev.filter((index) => index !== currentQuestionIndex)
-        : [...prev, currentQuestionIndex]
-    );
+    // setBookmarkedQuestions((prev) =>
+    //   prev.includes(currentQuestionIndex)
+    //     ? prev.filter((index) => index !== currentQuestionIndex)
+    //     : [...prev, currentQuestionIndex]
+    // );
+    setBookmarkedQuestions({
+      ...bookmarkedQuestions,
+      [`${currentSectionIndex}-${currentQuestionIndex}`]:bookmarkedQuestions[`${currentSectionIndex}-${currentQuestionIndex}`]==="true" ? 'false' : 'true',
+    });
   };
 
   const handleNavigation = (direction) => {
@@ -65,11 +72,11 @@ const Assessmentsstart = () => {
     setCurrentQuestionIndex(0);
   };
 
-  const handleFinishClick = () => {
-    setTimeout(() => {
-        navigate("/finish-assessment");
-    }, 2000);
-  };
+  // const handleFinishClick = () => {
+  //   setTimeout(() => {
+  //       navigate("/finish-assessment");
+  //   }, 2000);
+  // };
 
   const handleNextSection = () => {
     if (currentSectionIndex < questionData.sections.length - 1) {
@@ -100,19 +107,98 @@ const Assessmentsstart = () => {
     );
   };
 
+  const formatTimevalue = (seconds) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+    var time = "0";
+    console.log(minutes)
+    if(hours>0){
+      time = hours.toString().padStart(2, '0')+" hours "+minutes.toString().padStart(2, '0')+" minutues "+remainingSeconds.toString().padStart(2, '0')+" seconds";
+    }
+    else if(minutes>0){
+      time = minutes.toString().padStart(2, '0')+" minutues "+remainingSeconds.toString().padStart(2, '0')+" seconds";
+    }
+    else{
+      time = remainingSeconds.toString().padStart(2, '0')+" seconds";
+    }
+    return time;
+  };
+
   const sections = questionData.sections;
   const currentSection = sections[currentSectionIndex];
   const currentSectionQuestions = currentSection.questions.slice(0, 20);
   const currentQuestion = currentSectionQuestions[currentQuestionIndex];
 
-  const totalQuestions = currentSectionQuestions.length;
+  let [totalQuestions, settotalQuestions] = useState(0);
+  useEffect(()=>{
+    var total = 0;
+    for(var index in sections){
+      total += sections[index].questions.length;
+    }
+    settotalQuestions(total)
+  },[])
   const answeredCount = Object.keys(selectedOptions).length;
-  const bookmarkedCount = bookmarkedQuestions.length;
+  const bookmarkedCount = Object.keys(bookmarkedQuestions).length;
   const notAnsweredCount = totalQuestions - answeredCount;
 
   const isCurrentSectionCompleted = currentSectionQuestions.every((_, index) =>
     selectedOptions.hasOwnProperty(`${currentSectionIndex}-${index}`)
   );
+
+
+  function logout(){
+    confirmAlert({
+      title: 'You are about to Logout',
+      message: 'This will lead to loss of test progress, Do you wish to continue?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => navigate("../")
+        },
+        {
+          label: 'No',
+          onClick: () => console.log('Click No')
+        }
+      ]
+    });
+  };
+
+  function finishtest(){
+
+    if(notAnsweredCount>0){
+      confirmAlert({
+        title: 'You have '+notAnsweredCount+' unanswered questions',
+        message: 'Do you wish to continue?',
+        buttons: [
+          {
+            label: 'Yes',
+            onClick: () => navigate("/finish-assessment")
+          },
+          {
+            label: 'No',
+            onClick: () => console.log('Click No')
+          }
+        ]
+      });
+    }
+    else{
+    confirmAlert({
+      title: 'You have '+formatTimevalue(timeLeft)+' time left',
+      message: 'Make sure that your answer are correct. Do you wish to continue?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => navigate("/finish-assessment")
+        },
+        {
+          label: 'No',
+          onClick: () => console.log('Click No')
+        }
+      ]
+    });
+  }
+  };
 
   return (
     <div className='assessment-head'>
@@ -121,17 +207,30 @@ const Assessmentsstart = () => {
           <div className='brand-logo'>
             <img src={logoela} alt="C-Suite Academy" height='40px' />
           </div>
-          <select value={selectedUser} onChange={handleSelectChangeone}>
-            <option value="Deivasigamani">Deivasigamani</option>
-            <option value="OtherUser1">Profile</option>
-            <option value="OtherUser2">Log Out</option>
-          </select>
-          <button className='button-finish' onClick={handleFinishClick}>Finish</button>
+          <>
+            <Dropdown>
+              <Dropdown.Toggle id="dropdown-basic">
+                Deivasigamani
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {/* <Dropdown.Item>Profile</Dropdown.Item> */}
+                <Dropdown.Item onClick={(e)=>{
+              e.preventDefault();
+              logout();
+              }}>Log Out</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </>
+          <button className='button-finish' onClick={(e=>{
+            e.preventDefault();
+            finishtest()
+          })}>Finish</button>
         </div>
 
         <div className='container-fluid'>
           <div className='row'>
-            <div className='col-md-8 col-sm-12'>
+            <div className='w-75 h-100'>
               <main className="quiz-main">
                 <div className='first-content'>
                   <p className='count-question'>
@@ -172,7 +271,7 @@ const Assessmentsstart = () => {
                   <button className='button-next' onClick={() => handleNavigation('next')} disabled={currentQuestionIndex === currentSectionQuestions.length - 1}>
                     Next
                   </button>
-                  <button className='button-bookmark' onClick={handleBookmark}>Bookmark</button>
+                  <button className='button-bookmark' onClick={handleBookmark}>{`${bookmarkedQuestions[`${currentSectionIndex}-${currentQuestionIndex}`]=="true"? 'Bookmarked' : 'Bookmark'}`}</button>
                 </div>
 
                 {isCurrentSectionCompleted && currentSectionIndex < sections.length - 1 && (
@@ -182,11 +281,12 @@ const Assessmentsstart = () => {
                 )}
               </main>
             </div>
-            <div className='col-md-4 col-sm-12'>
+            <div className='w-25 h-100'>
               <div className='right-side-component'>
                 <div className="timer">
                   {formatTime(timeLeft)}
                 </div>
+                <div style={{display:"flex", flexDirection:"column",gap:"5px"}}>
                 <div className="questions">
                   <p>Questions</p>
                 </div>
@@ -203,13 +303,15 @@ const Assessmentsstart = () => {
                         className={`question-number ${
                           quesIndex === currentQuestionIndex ? 'active' : ''} 
                           ${selectedOptions[`${currentSectionIndex}-${quesIndex}`] ? 'answered' : ''} 
-                          ${!selectedOptions[`${currentSectionIndex}-${quesIndex}`] && bookmarkedQuestions.includes(`${currentSectionIndex}-${quesIndex}`) ? 'bookmarked' : ''}`}
+                          `}
                         onClick={() => setCurrentQuestionIndex(quesIndex)}
                       >
-                        {`${(quesIndex + 1).toString().padStart(2, '0')}`} <FontAwesomeIcon icon={faCheckCircle}  size='1rem'className='icon-check pl-4' />
+                        {/* {`${(quesIndex + 1).toString().padStart(2, '0')}`} <FontAwesomeIcon icon={faCheckCircle} style={{color:`${!selectedOptions[`${currentSectionIndex}-${quesIndex}`] && bookmarkedQuestions[`${currentSectionIndex}-${quesIndex}`]=="true"? 'orange' : ''}`}}  size='1rem'className='icon-check pl-4' /> */}
+                        {`${(quesIndex + 1).toString().padStart(2, '0')}`} <FontAwesomeIcon icon={faCheckCircle} size='1rem'className={`icon-check pl-4 ${bookmarkedQuestions[`${currentSectionIndex}-${quesIndex}`]=="true"? 'bookmarked' : ''}`} />
                       </button>
                     ))}
                   </div>
+                </div>
                 </div>
 
                 <div className='test-checkup-field'>

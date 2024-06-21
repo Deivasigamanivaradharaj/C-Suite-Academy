@@ -19,9 +19,11 @@
     height: calc(100vh - 4rem);
     width: calc(100% - 4rem);
     max-width: 100%;
+    overflow: hidden;
 }
 
 .closelevel-nav-content{
+    height: 10%;
     background: #FFFFFF;
     padding:0.5rem;
     padding-left:60px;
@@ -35,22 +37,20 @@
     display: flex;
     justify-content: center;
     align-items: center;  
-    margin-top: 2rem;
+    height: 90%;
 }
 
 /* Style the card container */
 .closelevel-card-container {
     background-color: rgb(255, 255, 255);
-    height:75vh;
-    width:75%;
-    border-radius: 20px; 
+    height:100%;
+    width:100%;
 }
 
 .ELA-close-heading{
     background: linear-gradient(91.24deg, #7F00FF 0%, #9735FA 98.76%);
     width: 100%;
     height:20%;
-    border-radius: 20px 20px 0px 0px;
     text-align: center;
 }
 
@@ -64,9 +64,11 @@
 
 .total-finish{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    height: 80%;
+    overflow: scroll;
 }
 
 .total-finish .icon-check-total-finish{
@@ -142,12 +144,12 @@
 
 @media (max-width: 768px) {
     .closelevel-inside {
-        width: calc(100% - 1rem);
+        width: calc(100% - 2rem);
     }
 
     .closelevel-card-container {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height: 100%;
     }
 
     .ELA-close-heading {

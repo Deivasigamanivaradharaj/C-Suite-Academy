@@ -19,9 +19,11 @@
     height: calc(100vh - 4rem);
     width: calc(100% - 4rem);
     max-width:100%;
+    overflow: hidden;
 }
 
 .entrylevel-nav-content{
+    height: 7%;
     background: #FFFFFF;
     padding:0.5rem;
     padding-left:60px;
@@ -32,26 +34,31 @@
 
 /* Ensure the parent container takes the full height of the viewport */
 .parent-container {
+    height: 93%;
     display: flex;
     justify-content: center;
     align-items: center;  
-    margin-top: 2rem;
 }
 
 /* Style the card container */
 .entryclass-card-container {
     background-color: rgb(255, 255, 255);
-    height:75vh;
-    width:75%;
-    border-radius: 20px; 
+    height:100%;
+    width:100%;
 }
 
 .ELA-heading{
     background: linear-gradient(91.24deg, #7F00FF 0%, #9735FA 98.76%);
     width: 100%;
-    height:25%;
-    border-radius: 20px 20px 0px 0px;
+    height:20%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.entryclass-card-container .row{
+    height: 75%;
 }
 
 #ela-title-head{
@@ -59,7 +66,6 @@
     color: #FFFFFF;
     font-size: 38px;
     font-weight: 600;
-    padding-top:2rem;
 }
 
 #ela-sub-title{
@@ -131,18 +137,31 @@
 /* Responsive Design */
 @media only screen and (max-width: 1200px) {
 
+    .entrylevel-nav-content{
+        height: 10%;
+    }
+    .parent-container{
+        height: 90%;
+    }
     .entrylevel-head {
         height:auto;
     }
 
 
     .entrylevel-inside {
-       height: calc(140vh - 2rem);
+       min-height: calc(100vh - 2rem);
+       height: calc(max-content - 2rem);
+       margin: 1rem 0px;
     }
 
     .entryclass-card-container {
-        width: 85%;
-        height: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .entryclass-card-container .row{
+        height: 80%;
+        overflow: scroll;
     }
 
     .assessment-details, .assessment-overview {
@@ -151,6 +170,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .entrylevel-nav-content{
+        height: 7%;
+    }
+    .parent-container{
+        height: 93%;
+    }
     .entrylevel-head {
         height:auto;
     }
@@ -161,8 +186,16 @@
     }
 
     .entryclass-card-container {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .entryclass-card-container .ELA-heading{
+        height: 15%;
+    }
+
+    .entryclass-card-container .row{
+        height: 85%;
     }
 
     .assessment-details, .assessment-overview {
@@ -194,8 +227,8 @@
     }
 
     .entryclass-card-container {
-        width: 95%;
-        height: auto;
+        width: 100%;
+        height: 100%;
     }
 
     .assessment-details, .assessment-overview {

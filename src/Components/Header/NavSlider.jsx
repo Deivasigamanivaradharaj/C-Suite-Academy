@@ -17,9 +17,9 @@ function NavSlider() {
 
   return (
     <div class="mega-box">
-            <div class="content">
+            <div class="content" style={{overflow:"hidden"}}>
               <div class="rows-image">
-                <img src={brand} alt="" className='image-side' height={'100%'}/>
+                <img src={brand} alt="" className='image-side' width={'100%'}/>
               </div>
               
               <div class="rows">

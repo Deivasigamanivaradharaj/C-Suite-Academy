@@ -72,7 +72,7 @@ const Entrylevel = () => {
                                 <h2>Assessment Overview</h2>
                                 <p className='first-para'>This Entry Level Assessment (ELA) is designed to evaluate your fundamental skills across various domains. It includes questions on mathematics, logical reasoning, verbal ability, and basic computer skills.</p>
                                 <p className='number-questions'>No of questions : <span>30 MCQ’s</span></p>
-                                <Link to='/entrylevel-start-page/quick-assessment'><button>Start Assessment</button></Link>
+                                <Link to='/quick-assessment'><button>Start Assessment</button></Link>
                             </div>
                         </div>
                     </div>
